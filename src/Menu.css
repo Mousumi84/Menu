@@ -1,0 +1,98 @@
+body {
+    margin: 0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+
+    #heading {
+        font-size: 50px;
+        padding-bottom: 30px;
+        border-bottom: 5px solid rgba(197, 157,95, 1);
+        margin-bottom: 0px;
+    }
+
+
+    #filters {
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+        color: rgba(197, 157,95, 1);
+        font-size: x-large;
+
+
+
+        .flt-rdo {
+            display: none;
+        }
+
+        .flt-labl {
+            margin: 0;
+            width: 200px;
+            padding: 0 70px 20px 20px ;
+        }
+
+        .flt-rdo:checked + .flt-labl {
+            margin: 0;
+            padding: 0 70px 20px 20px ;
+            border-bottom: 5px solid rgba(197, 157,95, 1);
+        }
+    }
+
+    #dishes {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: auto auto;
+        padding: 20px;
+        margin: 20px;
+
+
+        .dsh {
+            display: grid;
+            grid-template-areas: 'pic pic name name name price' 'pic pic des des des des' 'pic pic des des des des' 'pic pic des des des des';
+            width: 60%;
+
+            .imgbox {
+                grid-area: pic;
+
+                .img {
+                   width: 200px;
+                   height: 150px;
+                   border: solid 5px rgba(197, 157,95, 1);
+                   border-radius: 8px;
+                }
+            }
+
+            .nm {
+                grid-area: name;
+                width: 180px;
+                padding: 10px;
+                font-size: large;
+                border-bottom: 1px dashed rgb(78, 78, 78);
+            }
+
+            .price {
+                grid-area: price;
+                color: rgba(197, 157,95, 1);
+                border-bottom: 1px dashed rgb(78, 78, 78);
+                width: 80px;
+                padding: 10px;
+                text-align: end;
+            }
+
+            .des {
+                grid-area: des;
+                padding: 10px;
+                color: rgb(124, 124, 124);
+                font-weight: lighter;
+            }
+
+        }
+    }
+
+}
